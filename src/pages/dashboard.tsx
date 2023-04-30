@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Card from '@/components/Card/Card';
 import styles from '@/styles/Dashboard.module.css';
 import { cardsData } from '@/data/cardsData';
+import Registries from '@/components/Registries/Registries';
 
 const Dashboard: React.FC = () => {
   const [cards] = useState(cardsData);
@@ -21,16 +22,9 @@ const Dashboard: React.FC = () => {
           />
         ))}
       </div>
-      <div className={styles.registries}>
-        <div className={styles.registrySectionTitle}>
-          <div className={styles.registryButtons}>
-            <button className={styles.button}>Target Registry</button>
-          </div>
-        </div>
-      </div>
+      <Registries />
     </div>
   );
 };
 
 export default Dashboard;
-

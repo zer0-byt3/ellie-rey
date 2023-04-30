@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 export default function Home() {
   const boxRef = useRef<HTMLDivElement>(null);
   const [inputPasscode, setInputPasscode] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const passcode = {
     id: 'happyfamily',
@@ -26,9 +27,18 @@ export default function Home() {
 
   const handleEnterButtonClick = () => {
     if (inputPasscode === passcode.id) {
-      window.location.href = '/dashboard';
+      setIsLoading(true); // set loading state
+      setTimeout(() => {
+        window.location.href = '/dashboard';
+      }, 2000); // simulate loading time
     } else {
       alert("Sorry, that's wrong! Try again!");
+    }
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      handleEnterButtonClick();
     }
   };
 
@@ -44,20 +54,27 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.body}>
-          <div className={styles.hero}>
-            <div ref={boxRef} className={`${styles.box} ${styles.boxInitial}`}>
-              <h2 className={styles.boxTitle}>Welcome to Ellie's World!</h2>
-              <label className={styles.inputLabel}>Type passcode below to enter:</label>
-              <input
-                className={styles.enterWebsitePasscode}
-                value={inputPasscode}
-                onChange={handleInputChange}
-              />
-              <button className={styles.submitButton} onClick={handleEnterButtonClick}>
-                Enter
-              </button>
+          {isLoading ? (
+            <div className={styles.loadingContainer}>
+              <div className={styles.spinner}></div>
             </div>
-          </div>
+          ) : (
+            <div className={styles.hero}>
+              <div ref={boxRef} className={`${styles.box} ${styles.boxInitial}`}>
+                <h2 className={styles.boxTitle}>Welcome to Ellie's World!</h2>
+                <label className={styles.inputLabel}>Type passcode below to enter:</label>
+                <input
+                  className={styles.enterWebsitePasscode}
+                  value={inputPasscode}
+                  onChange={handleInputChange}
+                  onKeyPress={handleKeyPress}
+                />
+                <button className={styles.submitButton} onClick={handleEnterButtonClick}>
+                  Enter
+                </button>
+              </div>
+            </div>
+          )}
           <PhotoGrid />
         </div>
       </main>

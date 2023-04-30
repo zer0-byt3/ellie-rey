@@ -27,8 +27,11 @@ main {
   top: 0;
   left: 0;
   right: 0;
-  bottom: auto;
+  bottom: 0;
+  height: 100vh; /* set a fixed height */
+  width: 100vw; /* set a fixed width */
   background-color: var(--background-start-rgb);
+  overflow-y: scroll; /* enable vertical scrolling */
 }
 
 header {
