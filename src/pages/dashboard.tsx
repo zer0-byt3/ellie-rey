@@ -3,6 +3,7 @@ import Card from '@/components/Card/Card';
 import styles from '@/styles/Dashboard.module.css';
 import { cardsData } from '@/data/cardsData';
 import Registries from '@/components/Registries/Registries';
+import BabyShowerDirections from '@/components/BabyShowDirections/BabyShowerDirections';
 
 const Dashboard: React.FC = () => {
   const [cards] = useState(cardsData);
@@ -23,6 +24,7 @@ const Dashboard: React.FC = () => {
         ))}
       </div>
       <Registries />
+      <BabyShowerDirections />
     </div>
   );
 };

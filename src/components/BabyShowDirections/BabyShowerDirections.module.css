@@ -1,0 +1,32 @@
+.directions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.directionsTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: rgb(67, 0, 130);
+}
+
+.directionsBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+}
+
+.directionsBody p {
+    margin: 0.5rem;
+}
+
+.link {
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
