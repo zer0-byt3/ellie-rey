@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
+  --foreground-rgb: rgb(135,43,254);
+  --background-start-rgb: lavender;
+  --background-end-rgb: rgb(135,43,254);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,11 +23,12 @@ main {
 }
 
 .app-container {
-  min-height: 100vh;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: auto;
+  background-color: var(--background-start-rgb);
 }
 
 header {
