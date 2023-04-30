@@ -1,59 +1,72 @@
 .header {
-    position: sticky;
-    top: 0;
-    background-color: #872cff;
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 10vh;
-    width: 100%;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-    border-bottom: #900084 solid 3px;
-    box-shadow: 0 0 1rem #ff84f5;
-  }  
+  position: sticky;
+  top: 0;
+  background-color: #872cff;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  width: 100%;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  border-bottom: #900084 solid 3px;
+  box-shadow: 0 0 1rem #ff84f5;
+}
 
-  @keyframes glowing {
-    0% {
-      text-shadow: 0 0 2px #900084, 0 0 8px #900084, 0 0 15px #900084, 0 0 20px #900084, 0 0 30px #900084, 0 0 40px #900084, 0 0 50px #900084, 0 0 60px #900084;
-    }
-  
-    100% {
-      text-shadow: 0 0 2px #900084, 0 0 8px #900084, 0 0 15px #900084, 0 0 20px #900084, 0 0 30px #900084, 0 0 40px #900084, 0 0 50px #900084, 0 0 60px #900084;
-    }
-  }
-  
-  .title {
-    font-size: 2.5rem;
-    font-family: 'Allura', cursive;
-    color: rgb(255, 219, 253);
-    letter-spacing: 3px;
-    animation: glowing 2s infinite alternate;
-  }
-
-  .title:hover {
-    animation: none;
-    color: rgb(255, 219, 253);
-  }
-
-  .title:active {
-    animation: none;
-    color: rgb(255, 219, 253);
-  }
-  
-  .backButton {
-    position: absolute;
-    left: 1rem;
-    top: 1rem;
-    background-color: #872cff;
-    border: none;
-    border-radius: 5px;
+@media (max-width: 640px) {
+  .header {
+    height: 8vh;
     padding: 0.5rem;
-    color: rgb(255, 219, 253);
-    font-size: 1rem;
-    font-family: 'Allura', cursive;
-    letter-spacing: 3px;
-    box-shadow: 0 0 1rem #ff84f5;
+    text-align: right;
   }
+
+  .title {
+    font-size: .4rem;
+    
+  }
+
+  .backButton {
+    font-size: 0.3rem;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    text-shadow: 0 0 2px #900084, 0 0 8px #900084, 0 0 15px #900084, 0 0 20px #900084, 0 0 30px #900084, 0 0 40px #900084, 0 0 50px #900084, 0 0 60px #900084;
+  }
+
+  100% {
+    text-shadow: 0 0 2px #900084, 0 0 8px #900084, 0 0 15px #900084, 0 0 20px #900084, 0 0 30px #900084, 0 0 40px #900084, 0 0 50px #900084, 0 0 60px #900084;
+  }
+}
+
+.title {
+  font-size: 2.5rem;
+  font-family: 'Allura', cursive;
+  color: rgb(255, 219, 253);
+  letter-spacing: 3px;
+  animation: glowing 2s infinite alternate;
+}
+
+.title:hover,
+.title:active {
+  animation: none;
+  color: rgb(255, 219, 253);
+}
+
+.backButton {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  background-color: #872cff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  color: rgb(255, 219, 253);
+  font-size: 1rem;
+  font-family: 'Allura', cursive;
+  letter-spacing: 3px;
+  box-shadow: 0 0 1rem #ff84f5;
+}

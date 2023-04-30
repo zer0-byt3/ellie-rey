@@ -9,7 +9,7 @@ export default function Home() {
   const [inputPasscode, setInputPasscode] = useState('');
 
   const passcode = {
-    id: 'HappiestCoupleInTheWorld',
+    id: 'happyfamily',
   };
 
   useEffect(() => {
