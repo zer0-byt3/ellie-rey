@@ -8,7 +8,8 @@ const Dashboard: React.FC = () => {
 
   return (
     <div className={styles.dashboardPage}>
-      <h1>Dashboard</h1>
+      <div className={styles.pageTitle}>Dashboard</div>
+      <div className={styles.separator} />
       <div className={styles.cardGrid}>
         {cards.map((card, index) => (
           <Card
