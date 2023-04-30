@@ -3,7 +3,6 @@ import PhotoGrid from '@/components/PhotoGrid/PhotoGrid';
 import styles from '@/styles/Home.module.css';
 import { useEffect, useRef, useState } from 'react';
 
-
 export default function Home() {
   const boxRef = useRef<HTMLDivElement>(null);
   const [inputPasscode, setInputPasscode] = useState('');
@@ -41,6 +40,7 @@ export default function Home() {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
         />
+        <meta property="og:image" content="/assets/baby_girl_painting.png" />
       </Head>
       <main className={styles.main}>
         <div className={styles.body}>
