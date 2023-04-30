@@ -7,4 +7,6 @@
   text-align: center;
   width: 100%;
   font-family: 'Allura', cursive;
+  border-top: #dc2cff solid 3px;
+  box-shadow: 0 0 1rem #97008a;
 }

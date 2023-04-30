@@ -11,22 +11,24 @@
     height: 10vh;
     width: 100%;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: #900084 solid 3px;
+    box-shadow: 0 0 1rem #ff84f5;
   }  
 
   @keyframes glowing {
     0% {
-      text-shadow: 0 0 10px #900084, 0 0 20px #900084, 0 0 30px #900084, 0 0 40px #900084, 0 0 50px #900084, 0 0 60px #900084, 0 0 70px #900084, 0 0 80px #900084;
+      text-shadow: 0 0 2px #900084, 0 0 8px #900084, 0 0 15px #900084, 0 0 20px #900084, 0 0 30px #900084, 0 0 40px #900084, 0 0 50px #900084, 0 0 60px #900084;
     }
   
     100% {
-      text-shadow: 0 0 20px #cb00ba, 0 0 30px #cb00ba, 0 0 40px #cb00ba, 0 0 50px #cb00ba, 0 0 60px #cb00ba, 0 0 70px #cb00ba, 0 0 80px #cb00ba, 0 0 90px #cb00ba;
+      text-shadow: 0 0 2px #900084, 0 0 8px #900084, 0 0 15px #900084, 0 0 20px #900084, 0 0 30px #900084, 0 0 40px #900084, 0 0 50px #900084, 0 0 60px #900084;
     }
   }
   
   .title {
     font-size: 2.5rem;
     font-family: 'Allura', cursive;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 219, 253);
     letter-spacing: 3px;
     animation: glowing 2s infinite alternate;
   }
