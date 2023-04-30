@@ -12,8 +12,8 @@
       "AmplifyAppId": "d37qil5o8nhm6s"
     },
     "categories": {
-      "api": {
-        "ellierey": {}
+      "storage": {
+        "elliereydynamo": {}
       }
     }
   }

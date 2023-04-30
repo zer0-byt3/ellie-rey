@@ -32,4 +32,28 @@
     letter-spacing: 3px;
     animation: glowing 2s infinite alternate;
   }
+
+  .title:hover {
+    animation: none;
+    color: rgb(255, 219, 253);
+  }
+
+  .title:active {
+    animation: none;
+    color: rgb(255, 219, 253);
+  }
   
+  .backButton {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    background-color: #872cff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    color: rgb(255, 219, 253);
+    font-size: 1rem;
+    font-family: 'Allura', cursive;
+    letter-spacing: 3px;
+    box-shadow: 0 0 1rem #ff84f5;
+  }

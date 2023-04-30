@@ -1,0 +1,5 @@
+{
+  "tableName": "ellierey_app",
+  "partitionKeyName": "Passcode",
+  "partitionKeyType": "S"
+}

@@ -1,0 +1,10 @@
+{
+  "resourceName": "elliereydynamo",
+  "tableName": "ellierey_app",
+  "partitionKey": {
+    "fieldName": "Passcode",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

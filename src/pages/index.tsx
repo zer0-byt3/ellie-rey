@@ -1,10 +1,16 @@
 import Head from 'next/head';
 import PhotoGrid from '@/components/PhotoGrid/PhotoGrid';
 import styles from '@/styles/Home.module.css';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+
 
 export default function Home() {
   const boxRef = useRef<HTMLDivElement>(null);
+  const [inputPasscode, setInputPasscode] = useState('');
+
+  const passcode = {
+    id: 'HappiestCoupleInTheWorld',
+  };
 
   useEffect(() => {
     const { current: box } = boxRef!;
@@ -14,6 +20,18 @@ export default function Home() {
       box?.classList.add(styles.animate);
     }, 100);
   }, []);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputPasscode(e.target.value);
+  };
+
+  const handleEnterButtonClick = () => {
+    if (inputPasscode === passcode.id) {
+      window.location.href = '/dashboard';
+    } else {
+      alert("Sorry, that's wrong! Try again!");
+    }
+  };
 
   return (
     <>
@@ -30,8 +48,14 @@ export default function Home() {
             <div ref={boxRef} className={`${styles.box} ${styles.boxInitial}`}>
               <h2 className={styles.boxTitle}>Welcome to Ellie's World!</h2>
               <label className={styles.inputLabel}>Type passcode below to enter:</label>
-              <input className={styles.enterWebsitePasscode} />
-              <button className={styles.submitButton}>Enter</button>
+              <input
+                className={styles.enterWebsitePasscode}
+                value={inputPasscode}
+                onChange={handleInputChange}
+              />
+              <button className={styles.submitButton} onClick={handleEnterButtonClick}>
+                Enter
+              </button>
             </div>
           </div>
           <PhotoGrid />

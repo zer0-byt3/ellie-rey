@@ -2,6 +2,12 @@
     "AppSyncApiName": "ellierey",
     "DynamoDBBillingMode": "PAY_PER_REQUEST",
     "DynamoDBEnableServerSideEncryption": false,
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
     "S3DeploymentBucket": "amplify-ellierey-prod-145321-deployment",
-    "S3DeploymentRootKey": "amplify-appsync-files/bd311c6da17e0c4118e6703634b18f7cc909d21c"
+    "S3DeploymentRootKey": "amplify-appsync-files/ec52d2d85429092eab9a3d3005b803751b7d0d86"
 }

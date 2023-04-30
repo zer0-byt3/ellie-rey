@@ -1,7 +1,5 @@
 {
   "prod": {
-    "configLevel": "project",
-    "useProfile": true,
-    "profileName": "amplify-ellie-rey-appsync"
+    "configLevel": "amplifyAdmin"
   }
 }

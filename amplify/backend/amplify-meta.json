@@ -14,29 +14,52 @@
   },
   "api": {
     "ellierey": {
-      "service": "AppSync",
-      "providerPlugin": "awscloudformation",
       "dependsOn": [],
       "output": {
         "authConfig": {
-          "defaultAuthentication": {
-            "authenticationType": "API_KEY",
-            "apiKeyConfig": {
-              "apiKeyExpirationDays": 7
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
             }
-          },
-          "additionalAuthenticationProviders": []
+          ],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
+            },
+            "authenticationType": "API_KEY"
+          }
         },
         "GraphQLAPIIdOutput": "bgn2n3tbkvd7zay6ujwsfhoa7u",
         "GraphQLAPIEndpointOutput": "https://tkojpxkerzf6zglrtv3sazly54.appsync-api.us-east-1.amazonaws.com/graphql",
         "GraphQLAPIKeyOutput": "da2-vse5h22g5vgrzc6u2a5czjef4q"
       },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync",
+      "lastPushTimeStamp": "2023-04-30T17:45:43.034Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-ellierey-prod-145321-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apiellierey"
+      }
+    }
+  },
+  "storage": {
+    "elliereydynamo": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB",
+      "output": {
+        "PartitionKeyName": "Passcode",
+        "Region": "us-east-1",
+        "Arn": "arn:aws:dynamodb:us-east-1:950583543871:table/ellierey_app-prod",
+        "StreamArn": "arn:aws:dynamodb:us-east-1:950583543871:table/ellierey_app-prod/stream/2023-04-30T17:26:06.810",
+        "PartitionKeyType": "S",
+        "Name": "ellierey_app-prod"
       },
-      "lastPushTimeStamp": "2023-04-30T16:31:15.457Z",
-      "lastPushDirHash": "aCLTX/HqXL7B2avKM145coOAYDQ="
+      "lastPushTimeStamp": "2023-04-30T17:45:43.035Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-ellierey-prod-145321-deployment/amplify-cfn-templates/storage/elliereydynamo-cloudformation-template.json",
+        "logicalId": "storageelliereydynamo"
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
 
-type Todo {
+type Passcode @aws_iam @aws_api_key {
   id: ID!
   name: String!
   description: String
@@ -157,66 +157,66 @@ enum ModelSortDirection {
   DESC
 }
 
-type ModelTodoConnection {
-  items: [Todo]!
+type ModelPasscodeConnection @aws_api_key @aws_iam {
+  items: [Passcode]!
   nextToken: String
 }
 
-input ModelTodoFilterInput {
+input ModelPasscodeFilterInput {
   id: ModelIDInput
   name: ModelStringInput
   description: ModelStringInput
-  and: [ModelTodoFilterInput]
-  or: [ModelTodoFilterInput]
-  not: ModelTodoFilterInput
+  and: [ModelPasscodeFilterInput]
+  or: [ModelPasscodeFilterInput]
+  not: ModelPasscodeFilterInput
 }
 
 type Query {
-  getTodo(id: ID!): Todo
-  listTodos(filter: ModelTodoFilterInput, limit: Int, nextToken: String): ModelTodoConnection
+  getPasscode(id: ID!): Passcode @aws_api_key @aws_iam
+  listPasscodes(filter: ModelPasscodeFilterInput, limit: Int, nextToken: String): ModelPasscodeConnection @aws_api_key @aws_iam
 }
 
-input ModelTodoConditionInput {
+input ModelPasscodeConditionInput {
   name: ModelStringInput
   description: ModelStringInput
-  and: [ModelTodoConditionInput]
-  or: [ModelTodoConditionInput]
-  not: ModelTodoConditionInput
+  and: [ModelPasscodeConditionInput]
+  or: [ModelPasscodeConditionInput]
+  not: ModelPasscodeConditionInput
 }
 
-input CreateTodoInput {
+input CreatePasscodeInput {
   id: ID
   name: String!
   description: String
 }
 
-input UpdateTodoInput {
+input UpdatePasscodeInput {
   id: ID!
   name: String
   description: String
 }
 
-input DeleteTodoInput {
+input DeletePasscodeInput {
   id: ID!
 }
 
 type Mutation {
-  createTodo(input: CreateTodoInput!, condition: ModelTodoConditionInput): Todo
-  updateTodo(input: UpdateTodoInput!, condition: ModelTodoConditionInput): Todo
-  deleteTodo(input: DeleteTodoInput!, condition: ModelTodoConditionInput): Todo
+  createPasscode(input: CreatePasscodeInput!, condition: ModelPasscodeConditionInput): Passcode @aws_api_key @aws_iam
+  updatePasscode(input: UpdatePasscodeInput!, condition: ModelPasscodeConditionInput): Passcode @aws_api_key @aws_iam
+  deletePasscode(input: DeletePasscodeInput!, condition: ModelPasscodeConditionInput): Passcode @aws_api_key @aws_iam
 }
 
-input ModelSubscriptionTodoFilterInput {
+input ModelSubscriptionPasscodeFilterInput {
   id: ModelSubscriptionIDInput
   name: ModelSubscriptionStringInput
   description: ModelSubscriptionStringInput
-  and: [ModelSubscriptionTodoFilterInput]
-  or: [ModelSubscriptionTodoFilterInput]
+  and: [ModelSubscriptionPasscodeFilterInput]
+  or: [ModelSubscriptionPasscodeFilterInput]
 }
 
 type Subscription {
-  onCreateTodo(filter: ModelSubscriptionTodoFilterInput): Todo @aws_subscribe(mutations: ["createTodo"])
-  onUpdateTodo(filter: ModelSubscriptionTodoFilterInput): Todo @aws_subscribe(mutations: ["updateTodo"])
-  onDeleteTodo(filter: ModelSubscriptionTodoFilterInput): Todo @aws_subscribe(mutations: ["deleteTodo"])
+  onCreatePasscode(filter: ModelSubscriptionPasscodeFilterInput): Passcode @aws_subscribe(mutations: ["createPasscode"]) @aws_api_key @aws_iam
+  onUpdatePasscode(filter: ModelSubscriptionPasscodeFilterInput): Passcode @aws_subscribe(mutations: ["updatePasscode"]) @aws_api_key @aws_iam
+  onDeletePasscode(filter: ModelSubscriptionPasscodeFilterInput): Passcode @aws_subscribe(mutations: ["deletePasscode"]) @aws_api_key @aws_iam
 }
 

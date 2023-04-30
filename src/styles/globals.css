@@ -15,3 +15,41 @@
     --background-end-rgb: 255, 255, 255;
   }
 }
+
+/* globals.css */
+
+main {
+  flex-grow: 1;
+}
+
+.app-container {
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 1000;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header,
+main,
+footer {
+  margin: 0;
+}
