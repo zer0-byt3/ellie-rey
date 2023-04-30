@@ -1,0 +1,138 @@
+.box {
+  background-color: #c20dd2;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 1000px;
+  opacity: 0;
+  transition: opacity 3s ease-in, transform 0.5s ease-in;
+  position: absolute; /* Add this line */
+  top: 20%; /* Adjust this value to move the box closer or farther from the header */
+  right: 10%; /* Adjust this value to move the box left or right */
+  border: solid 1px #fff;
+  box-shadow: #ffc5fd 0px 0px 10px 0px;
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.box.animate {
+  opacity: .8;
+}
+
+.boxInitial {
+  opacity: 0;
+}
+
+.boxTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 0 5px #c300eb, 0 0 10px #c300eb, 0 0 20px #ff4ef0, 0 0 30px #c300eb, 0 0 40px #ff4ef0, 0 0 55px #ff4ef0, 0 0 75px #c300eb;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+}
+
+.boxText {
+  font-size: .2rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+.inputLabel {
+  font-size: 1rem;
+  color: white;
+  margin-top: 1vh;
+  align-self: flex-start;
+  margin-left: 2rem;
+  margin-bottom: 1vh;
+}
+
+.enterWebsitePasscode {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #666;
+  padding-left: 5px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border: 3px solid #6e006e;
+  border-radius: 8px;
+  margin-bottom: 1vh;
+}
+
+.submitButton {
+  background-color: #6e006e;
+  color: white;
+  border: white solid 1px;
+  box-shadow: inset .3rem 0 1.5rem #ff80f4;
+  border-radius: 8px;
+  padding: 1vh 2vw;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  cursor: pointer;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.submitButton:hover {
+  background-color: #ff80f4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 1vh 2vw;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  cursor: pointer;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.submitButton:active {
+  background-color: #6e006e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 1vh 2vw;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  cursor: pointer;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #ffc5fd;
+  color: rgb(117, 0, 163);
+  font-size: calc(10px + 2vmin);
+  text-align: center;
+  font-family: 'Allura', cursive;
+  background-image: url('/assets/baby_girl_painting.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.body {
+  display: flex;
+  flex-direction: column; /* Change this to column */
+  justify-content: center; /* Change this to center */
+  align-items: center;
+  color: rgb(117, 0, 163);
+  font-size: calc(10px + 2vmin);
+  text-align: center;
+  font-family: 'Allura', cursive;
+  min-height: 80vh;
+  width: 100%;
+}

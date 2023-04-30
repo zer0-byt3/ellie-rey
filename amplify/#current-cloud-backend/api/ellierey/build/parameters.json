@@ -1,0 +1,7 @@
+{
+    "AppSyncApiName": "ellierey",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "S3DeploymentBucket": "amplify-ellierey-prod-145321-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/bd311c6da17e0c4118e6703634b18f7cc909d21c"
+}

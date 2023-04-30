@@ -1,0 +1,33 @@
+.header {
+    position: sticky;
+    top: 0;
+    background-color: #872cff;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 100%;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  }  
+
+  @keyframes glowing {
+    0% {
+      text-shadow: 0 0 10px #900084, 0 0 20px #900084, 0 0 30px #900084, 0 0 40px #900084, 0 0 50px #900084, 0 0 60px #900084, 0 0 70px #900084, 0 0 80px #900084;
+    }
+  
+    100% {
+      text-shadow: 0 0 20px #cb00ba, 0 0 30px #cb00ba, 0 0 40px #cb00ba, 0 0 50px #cb00ba, 0 0 60px #cb00ba, 0 0 70px #cb00ba, 0 0 80px #cb00ba, 0 0 90px #cb00ba;
+    }
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-family: 'Allura', cursive;
+    color: rgb(255, 255, 255);
+    letter-spacing: 3px;
+    animation: glowing 2s infinite alternate;
+  }
+  

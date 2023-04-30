@@ -1,0 +1,10 @@
+.footer {
+  position: sticky;
+  bottom: 0;
+  background-color: #872cff;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  font-family: 'Allura', cursive;
+}
