@@ -12,6 +12,8 @@ const Dashboard: React.FC = () => {
     <div className={styles.dashboardPage}>
       <div className={styles.pageTitle}>Dashboard</div>
       <div className={styles.separator} />
+      <BabyShowerDirections />
+      <Registries />
       <div className={styles.cardGrid}>
         {cards.map((card, index) => (
           <Card
@@ -23,8 +25,6 @@ const Dashboard: React.FC = () => {
           />
         ))}
       </div>
-      <Registries />
-      <BabyShowerDirections />
     </div>
   );
 };

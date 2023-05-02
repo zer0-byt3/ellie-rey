@@ -4,9 +4,12 @@
   border-radius: 1000px;
   opacity: 0;
   transition: opacity 3s ease-in, transform 0.5s ease-in;
-  position: absolute; /* Add this line */
-  top: 20%; /* Adjust this value to move the box closer or farther from the header */
-  right: 10%; /* Adjust this value to move the box left or right */
+  position: absolute;
+  /* Add this line */
+  top: 20%;
+  /* Adjust this value to move the box closer or farther from the header */
+  right: 10%;
+  /* Adjust this value to move the box left or right */
   border: solid 1px #fff;
   box-shadow: #ffc5fd 0px 0px 10px 0px;
   width: 20rem;
@@ -128,8 +131,10 @@
 
 .body {
   display: flex;
-  flex-direction: column; /* Change this to column */
-  justify-content: center; /* Change this to center */
+  flex-direction: column;
+  /* Change this to column */
+  justify-content: center;
+  /* Change this to center */
   align-items: center;
   color: rgb(117, 0, 163);
   font-size: calc(10px + 2vmin);
@@ -182,6 +187,7 @@
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -243,7 +249,112 @@
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 999;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
   background-color: #872cff;
   opacity: 0.8;
+}
+
+.spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spinner .lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.spinner .lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #ff84f5;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #ff84f5 transparent transparent transparent;
+}
+
+.spinner .lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.spinner .lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.spinner .lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .box {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+    height: 50%;
+    max-height: 600px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .boxTitle {
+    font-size: 1.5rem;
+  }
+
+  .boxText {
+    font-size: 0.8rem;
+  }
+
+  .inputLabel {
+    font-size: 1rem;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
+
+  .submitButton {
+    font-size: 1.2rem;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
+
+  .pageTitle {
+    font-size: 2.5rem;
+    margin-top: 4vh;
+  }
+
+  .card {
+    font-size: 1rem;
+  }
+
+  .registrySectionTitle {
+    font-size: 1rem;
+  }
+
+  .registryButtons {
+    margin: 0.5rem;
+  }
 }

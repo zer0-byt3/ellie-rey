@@ -10,7 +10,7 @@
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    color: rgb(67, 0, 130);
+    color: rgb(236, 216, 254);
 }
 
 .directionsBody {
@@ -19,6 +19,7 @@
     align-items: center;
     text-align: center;
     font-size: 18px;
+    color: rgb(255, 219, 253);
 }
 
 .directionsBody p {
@@ -29,4 +30,5 @@
     font-weight: bold;
     text-decoration: underline;
     cursor: pointer;
+    color: white;
 }
